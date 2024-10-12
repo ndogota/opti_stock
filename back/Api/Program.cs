@@ -45,8 +45,8 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 */
 
 using Microsoft.EntityFrameworkCore;
-using Api.Data;    // Assurez-vous que ce namespace est là
-using Api.Models;  // Assurez-vous que ce namespace est là aussi
+using Api.Data;
+using Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,7 +59,7 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Configurer les middlewares
+// Middlewares
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
