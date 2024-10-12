@@ -50,11 +50,11 @@ using Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Ajouter la chaîne de connexion pour PostgreSQL
+// PostgreSQL
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Ajouter les contrôleurs
+// Contrôleurs
 builder.Services.AddControllers();
 
 var app = builder.Build();
