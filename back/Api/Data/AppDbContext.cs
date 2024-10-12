@@ -11,7 +11,6 @@ namespace Api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Spécifiez le schéma de la table Products
             modelBuilder.Entity<Product>()
                 .ToTable("products", "public");
         }
