@@ -1,10 +1,10 @@
-import Axios from "axios";
+/*import Axios from "axios";*/
 
 import './App.css';
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";*/
 
 function App() {
-  const [car, setCar] = useState([]);
+  /*const [car, setCar] = useState([]);
 
   useEffect(() => {
     cars();
@@ -17,12 +17,8 @@ function App() {
     } catch (error) {
       console.error('Error when fetching the data :', error);
     }
-  }
 
-  return (
-    <div className="App">
-      <h1>Fetch Data from the back :</h1>
-      <ol>
+       <ol>
         {car.map((data) => {
           return(
             <li key={data._id}>
@@ -30,7 +26,12 @@ function App() {
             </li>
           )
         })}
-      </ol>
+      </ol>   
+  }*/
+
+  return (
+    <div className="App">
+      <h1>Fetch Data from the back :</h1>
     </div>
   );
 }

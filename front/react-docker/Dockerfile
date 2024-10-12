@@ -1,15 +1,12 @@
-FROM alpine:3.18.4
+FROM node:18-alpine
 
-RUN apk add --no-cache nodejs npm
+WORKDIR /react-docker/
 
-WORKDIR /react-docker
-
-COPY react-docker/package*.json ./
+COPY public/ /react-docker/public
+COPY src/ /react-docker/src
+COPY package.json /react-docker/
 
 RUN npm install
-RUN npm i axios
-
-COPY /react-docker /react-docker
 
 CMD ["npm", "start"]
 
