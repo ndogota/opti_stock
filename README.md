@@ -16,7 +16,7 @@ En s'appuyant sur des données historiques de vente et des tendances de consomma
 
 ## Technologies Utilisées
 
-- **Front-End :** React, TypeScript
+- **Front-End :** React
 - **Back-End :** C#
 - **Base de Données :** PostgreSQL
 - **Containerisation :** Docker
