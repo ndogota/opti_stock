@@ -18,7 +18,7 @@ function App() {
       setData(response.data);
     } catch (error) {
       console.error('Error when fetching the data :', error);
-    } 
+    }
   }
 
   return (
@@ -28,7 +28,7 @@ function App() {
         {data.map((data) => {
           return(
             <li key={data.id}>
-              id : {data.id} name : {data.name} years : {data.years} price : {data.price}
+              id : {data.id} name : {data.name} price : {data.price} quantity_in_stock : {data.quantity_in_stock} reorder_level : {data.reorder_level} category : {data.category} 
             </li>
           )
         })}
