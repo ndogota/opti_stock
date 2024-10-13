@@ -1,37 +1,38 @@
-/*import Axios from "axios";*/
+import { useEffect, useState } from "react";
+
+import Axios from "axios";
 
 import './App.css';
-/*import { useEffect, useState } from "react";*/
 
 function App() {
-  /*const [car, setCar] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    cars();
+    products();
   }, []);
 
-  const cars = async() => {
+
+  const products = async() => {
     try {
-      const response = await Axios.get('http://back-service:3070/cars');
-      setCar(response.data);
+      const response = await Axios.get('http://localhost:5157/api/products');
+      setData(response.data);
     } catch (error) {
       console.error('Error when fetching the data :', error);
-    }
-
-       <ol>
-        {car.map((data) => {
-          return(
-            <li key={data._id}>
-              brand : {data.brand} model : {data.model} years : {data.years} horsepower : {data.horsepower}
-            </li>
-          )
-        })}
-      </ol>   
-  }*/
+    } 
+  }
 
   return (
     <div className="App">
-      <h1>Fetch Data from the back :</h1>
+      <h1>Fetch Data from the Back :</h1>
+      <ol>
+        {data.map((data) => {
+          return(
+            <li key={data.id}>
+              id : {data.id} name : {data.name} years : {data.years} price : {data.price}
+            </li>
+          )
+        })}
+      </ol>  
     </div>
   );
 }
