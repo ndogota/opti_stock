@@ -1,4 +1,4 @@
--- Création de la base de données si elle n'existe pas déjà
+-- Creation of the database if it does not already exist
 DO $$
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM pg_database WHERE datname = 'db') THEN
@@ -6,10 +6,10 @@ BEGIN
     END IF;
 END $$;
 
--- Connexion à la base de données
+-- Connection to the database
 \c db;
 
--- Création de la table products
+-- Creation of the products table
 CREATE TABLE IF NOT EXISTS products (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS products (
     description TEXT
 );
 
--- We can use a parsed csv instead (TODO)
--- Insertion des données si la table est vide
+-- We can use a parsed CSV instead (TODO)
+-- Insertion of data if the table is empty
 INSERT INTO products (name, price, quantity_in_stock, reorder_level, category, supplier, description) VALUES
 ('Smartphone X10', 999.99, 20, 5, 'Electronics', 'Tech Gadgets Inc.', 'Latest smartphone with cutting-edge features.'),
 ('Robot Aspirateur ProClean', 299.99, 15, 3, 'Home Appliances', 'HomeSmart Solutions', 'Smart robot vacuum cleaner for effortless cleaning.'),

@@ -1,0 +1,17 @@
+.DashboardItem {
+    background-color: white;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+
+    border-radius: 5px;
+}
+
+.DashboardTitle {
+    font-size: 2em;
+    margin-top: 1rem;
+    color: rgb(0, 0, 0);
+}

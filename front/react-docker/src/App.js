@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 
 import Axios from "axios";
 
+import Header from "./components/header/Header";
+import Dashboard from "./components/Dashboard";
+
 import './App.css';
 
 function App() {
@@ -14,7 +17,7 @@ function App() {
 
   const products = async() => {
     try {
-      const response = await Axios.get('http://localhost:5157/api/products');
+      const response = await Axios.get('http://localhost:8080/api/products');
       setData(response.data);
     } catch (error) {
       console.error('Error when fetching the data :', error);
@@ -23,16 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Fetch Data from the Back :</h1>
-      <ol>
-        {data.map((data) => {
-          return(
-            <li key={data.id}>
-              id : {data.id} name : {data.name} price : {data.price} quantity_in_stock : {data.quantity_in_stock} reorder_level : {data.reorder_level} category : {data.category} 
-            </li>
-          )
-        })}
-      </ol>  
+      <Header />
+      <Dashboard data={data}/>
     </div>
   );
 }

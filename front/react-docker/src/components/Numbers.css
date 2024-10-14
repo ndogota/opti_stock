@@ -1,0 +1,18 @@
+p {
+    margin: 0;
+}
+
+.Number {
+    display: flex;
+    justify-content: space-between;
+}
+
+.NumberItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.NumberTitle {
+    font-size: 1.5em;
+}
