@@ -14,10 +14,9 @@ function App() {
     products();
   }, []);
 
-
   const products = async() => {
     try {
-      const response = await Axios.get('http://localhost:8080/api/products');
+      const response = await Axios.get('http://20.199.42.62:30070/api/products');
       setData(response.data);
     } catch (error) {
       console.error('Error when fetching the data :', error);

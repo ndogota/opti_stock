@@ -25,7 +25,7 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 // Middlewares
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseCors("AllowAll");
 app.UseAuthorization();
 
