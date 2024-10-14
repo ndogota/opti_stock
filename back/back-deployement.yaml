@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: front-deployment
+  name: back-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: front
+      app: back
   template:
     metadata:
       labels:
-        app: front
+        app: back
     spec:
       containers:
-        - name: front
-          image: ndogota/front-image:latest
+        - name: back
+          image: ndogota/back-image:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
